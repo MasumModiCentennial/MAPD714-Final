@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,9 +15,15 @@
 		058CE0E925830D78004A4192 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058CE0E725830D78004A4192 /* Main.storyboard */; };
 		058CE0EB25830D7B004A4192 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058CE0EA25830D7B004A4192 /* Assets.xcassets */; };
 		058CE0EE25830D7B004A4192 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058CE0EC25830D7B004A4192 /* LaunchScreen.storyboard */; };
+		059B1EAD2583D6140004BB30 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 059B1EAC2583D6140004BB30 /* GoogleService-Info.plist */; };
+		059B1EAF2583D7C60004BB30 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 059B1EAE2583D7C60004BB30 /* Podfile */; };
+		059B1EB32583E4390004BB30 /* RecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059B1EB22583E4390004BB30 /* RecordCell.swift */; };
+		059B1EB62583F5E40004BB30 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059B1EB52583F5E40004BB30 /* Helper.swift */; };
+		6B14E3811F032548B485E076 /* Pods_BMI_Calculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C08F0B246FD7CC42BFDFA96F /* Pods_BMI_Calculator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00A752931332BEC1A3CCD82A /* Pods-BMI Calculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMI Calculator.release.xcconfig"; path = "Target Support Files/Pods-BMI Calculator/Pods-BMI Calculator.release.xcconfig"; sourceTree = "<group>"; };
 		0562E853258355F400103326 /* BMICalculateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMICalculateController.swift; sourceTree = "<group>"; };
 		0562E8562583565700103326 /* BMIRecordsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIRecordsController.swift; sourceTree = "<group>"; };
 		058CE0DE25830D78004A4192 /* BMI Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BMI Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,6 +34,12 @@
 		058CE0EA25830D7B004A4192 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		058CE0ED25830D7B004A4192 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		058CE0EF25830D7B004A4192 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		059B1EAC2583D6140004BB30 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		059B1EAE2583D7C60004BB30 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		059B1EB22583E4390004BB30 /* RecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCell.swift; sourceTree = "<group>"; };
+		059B1EB52583F5E40004BB30 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		C08F0B246FD7CC42BFDFA96F /* Pods_BMI_Calculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BMI_Calculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE49D405F05FADE01D6BEFC3 /* Pods-BMI Calculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMI Calculator.debug.xcconfig"; path = "Target Support Files/Pods-BMI Calculator/Pods-BMI Calculator.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B14E3811F032548B485E076 /* Pods_BMI_Calculator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				0562E8562583565700103326 /* BMIRecordsController.swift */,
+				059B1EB22583E4390004BB30 /* RecordCell.swift */,
 			);
 			path = BMIRecords;
 			sourceTree = "<group>";
@@ -68,8 +82,11 @@
 		058CE0D525830D78004A4192 = {
 			isa = PBXGroup;
 			children = (
+				059B1EAE2583D7C60004BB30 /* Podfile */,
 				058CE0E025830D78004A4192 /* BMI Calculator */,
 				058CE0DF25830D78004A4192 /* Products */,
+				CF992DD9308825B4A4FA0B0C /* Pods */,
+				50FCDEB9A85B197ED5861DCA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +101,8 @@
 		058CE0E025830D78004A4192 /* BMI Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				059B1EB42583F5C70004BB30 /* App Utility */,
+				059B1EAC2583D6140004BB30 /* GoogleService-Info.plist */,
 				0562E8582583568C00103326 /* SplashScreen */,
 				0562E8552583562C00103326 /* BMIRecords */,
 				0562E852258355BF00103326 /* BMI Calculate */,
@@ -97,6 +116,31 @@
 			path = "BMI Calculator";
 			sourceTree = "<group>";
 		};
+		059B1EB42583F5C70004BB30 /* App Utility */ = {
+			isa = PBXGroup;
+			children = (
+				059B1EB52583F5E40004BB30 /* Helper.swift */,
+			);
+			path = "App Utility";
+			sourceTree = "<group>";
+		};
+		50FCDEB9A85B197ED5861DCA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C08F0B246FD7CC42BFDFA96F /* Pods_BMI_Calculator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF992DD9308825B4A4FA0B0C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EE49D405F05FADE01D6BEFC3 /* Pods-BMI Calculator.debug.xcconfig */,
+				00A752931332BEC1A3CCD82A /* Pods-BMI Calculator.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -104,9 +148,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 058CE0F225830D7B004A4192 /* Build configuration list for PBXNativeTarget "BMI Calculator" */;
 			buildPhases = (
+				EBECC6E80AC59141D8B79A76 /* [CP] Check Pods Manifest.lock */,
 				058CE0DA25830D78004A4192 /* Sources */,
 				058CE0DB25830D78004A4192 /* Frameworks */,
 				058CE0DC25830D78004A4192 /* Resources */,
+				D87A221CE7031FB5FE5056C6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,7 +201,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				059B1EAF2583D7C60004BB30 /* Podfile in Resources */,
 				058CE0EE25830D7B004A4192 /* LaunchScreen.storyboard in Resources */,
+				059B1EAD2583D6140004BB30 /* GoogleService-Info.plist in Resources */,
 				058CE0EB25830D7B004A4192 /* Assets.xcassets in Resources */,
 				058CE0E925830D78004A4192 /* Main.storyboard in Resources */,
 			);
@@ -163,15 +211,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D87A221CE7031FB5FE5056C6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BMI Calculator/Pods-BMI Calculator-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BMI Calculator/Pods-BMI Calculator-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BMI Calculator/Pods-BMI Calculator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBECC6E80AC59141D8B79A76 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BMI Calculator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		058CE0DA25830D78004A4192 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				058CE0E625830D78004A4192 /* SplashScreenController.swift in Sources */,
+				059B1EB62583F5E40004BB30 /* Helper.swift in Sources */,
 				0562E854258355F400103326 /* BMICalculateController.swift in Sources */,
 				058CE0E225830D78004A4192 /* AppDelegate.swift in Sources */,
 				0562E8572583565700103326 /* BMIRecordsController.swift in Sources */,
+				059B1EB32583E4390004BB30 /* RecordCell.swift in Sources */,
 				058CE0E425830D78004A4192 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,6 +406,7 @@
 		};
 		058CE0F325830D7B004A4192 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE49D405F05FADE01D6BEFC3 /* Pods-BMI Calculator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -332,6 +425,7 @@
 		};
 		058CE0F425830D7B004A4192 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00A752931332BEC1A3CCD82A /* Pods-BMI Calculator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

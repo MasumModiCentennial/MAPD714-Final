@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import Firebase
+import FirebaseFirestore
 
 class BMICalculateController: UIViewController {
     
@@ -21,14 +23,28 @@ class BMICalculateController: UIViewController {
     @IBOutlet weak var lblMessage: UILabel!
     
     var imperialUnit = false
+    var selectedGender = "Male"
     
+    let db = Firestore.firestore()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.txtName.delegate = self
+        self.txtAge.delegate = self
+    
+        self.txtName.text = getValueFromPreference(forKey: "name") as? String
+        self.txtAge.text = getValueFromPreference(forKey: "age") as? String
     }
     
+    
+    
     @IBAction func segGenderValueChanged(_ sender: UISegmentedControl) {
-        
+        if sender.selectedSegmentIndex == 0 {
+            selectedGender = "Male"
+        }else{
+            selectedGender = "Female"
+        }
     }
     
     @IBAction func segUnitValueChanged(_ sender: UISegmentedControl) {
@@ -47,7 +63,9 @@ class BMICalculateController: UIViewController {
         txtHeight.text = ""
     }
     
+
     @IBAction func calculateBMI(_ sender: UIButton) {
+        
         guard let strWeight = self.txtWeight.text,
             let strHeight = self.txtHeight.text,
             let weight = Float(strWeight),
@@ -66,6 +84,7 @@ class BMICalculateController: UIViewController {
         self.lblScore.text = "BMI Score: " + String(format: "%.2f",result)
         
         calculateMessage(result: result)
+        
         
     }
     
@@ -92,7 +111,44 @@ class BMICalculateController: UIViewController {
             message = "Something went wrong"
         }
         lblMessage.text = message
+        
+        addToFirestore(result: result,message: message)
     }
     
     
+    func addToFirestore(result: Float, message: String) {
+        var ref: DocumentReference? = nil
+        ref = db.collection("BMIRecords").addDocument(data: [
+            "weight": (txtWeight.text! as NSString).floatValue,
+            "height": (txtHeight.text! as NSString).floatValue,
+            "bmiScore": result,
+            "message": message,
+            "imperialUnit": imperialUnit,
+            "date": Date()
+        ]) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with ID: \(ref!.documentID)")
+            }
+        }
+    }
+    
+}
+
+//  // extension for textfield delegates
+extension BMICalculateController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField === self.txtName {
+           setValueInPreference(forKey: "name", value: textField.text ?? "")
+        } else if textField === self.txtAge {
+           setValueInPreference(forKey: "age", value: textField.text ?? "")
+        }
+        setValueInPreference(forKey: "isMale", value: selectedGender)
+    }
 }
