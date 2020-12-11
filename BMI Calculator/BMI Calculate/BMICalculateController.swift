@@ -32,6 +32,9 @@ class BMICalculateController: UIViewController {
         // Do any additional setup after loading the view.
         self.txtName.delegate = self
         self.txtAge.delegate = self
+        
+        self.txtWeight.delegate = self
+        self.txtHeight.delegate = self
     
         self.txtName.text = getValueFromPreference(forKey: "name") as? String
         self.txtAge.text = getValueFromPreference(forKey: "age") as? String
